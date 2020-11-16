@@ -12,7 +12,14 @@ app.get('/', (reg,res) => {
     title: 'Test Article',
     createdAt: Date.now(),
     description: 'Hello there'
-  }]
+  },
+{
+  title: 'Test Article 2',
+  createdAt: Date.now(),
+  description: 'Hello there 2'
+
+
+}]
   res.render('index', {articles : articles})
 })
 
