@@ -10,12 +10,12 @@ app.use('/articles', articleRouter)
 app.get('/', (reg,res) => {
   const articles = [{
     title: 'Test Article',
-    createdAt: Date.now(),
+    createdAt: new Date(),
     description: 'Hello there'
   },
 {
   title: 'Test Article 2',
-  createdAt: Date.now(),
+  createdAt: new Date(),
   description: 'Hello there 2'
 
 
