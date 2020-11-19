@@ -15,20 +15,12 @@ body {
 <body>
 
 <div class = "container">
-  <h1 class="mb-4">Blog Articles</h1>
-  <a href="/articles/new" class = "btn btn-success">New Article</a>
+  <h1 class="mb-4">New Article</h1>
+  
+  <form action="/articles" method="POST">
+    <%- include('_form_fields')%>
 
-  <% articles.forEach(article => { %>
-    <div class=" card mt-4">
-      <div class="card-body">
-        <h4 class="card-title"> <%= article.title%></h4>
-        <div class ="card-subtitle text-muted mb-2">
-          <%= article.createdAt.toLocaleDateString()%>
-        </div>
-      </div>
-    </div>
-
-  <% }) %>
+    </form>
 </div>
 
 
