@@ -7,9 +7,9 @@ const app = express()
 mongoose.connect('mongodb://localhost/blog'){useNewUrlParser:true, usedUnifiedTopology: true})
 
 app.set('view engine', 'ejs')
-
-app.use('/articles', articleRouter)
 app.use(express.urlencoded({ extended: false}))
+
+
 
 app.get('/', (reg,res) => {
   const articles = [{
@@ -26,5 +26,5 @@ app.get('/', (reg,res) => {
 }]
   res.render('articles/index', {articles : articles})
 })
-
+app.use('/articles', articleRouter)
 app.listen(5000)
