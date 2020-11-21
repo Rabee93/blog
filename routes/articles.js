@@ -9,8 +9,8 @@ router.get('/new', (req,res) => {
 
 router.get ('/:id', async (req,res) => {
   const article = await Article.findById(req.params.id)
-  if (article == nul) res.redirect('/')
-  res.render('articles/show', {article:article })
+  if (article == null) res.redirect('/')
+  res.render('articles/show', { article: article })
 
 })
 
